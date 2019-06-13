@@ -14,12 +14,40 @@
 	<link rel="stylesheet" href="{%static 'css/adaptive.css'%}">
 	<script src="{%static 'js/index.js'%}"></script>
 	<script>
-		function closed(){document.getElementById("galleryinfo").style.display = "none";
+		function closed(){
+		document.getElementById("galleryinfo").style.display = "none";
+
 		document.getElementById("galleryopen1").style.display = "none";
 		document.getElementById("galleryopen2").style.display = "none";
 		document.getElementById("galleryopen3").style.display = "none";
 		document.getElementById("galleryopen4").style.display = "none";
 		document.getElementById("galleryopen5").style.display = "none";
+
+		document.getElementById("hotopen1").style.display = "none";
+		document.getElementById("hotopen2").style.display = "none";
+		document.getElementById("hotopen3").style.display = "none";
+		document.getElementById("hotopen4").style.display = "none";
+		document.getElementById("hotopen5").style.display = "none";
+		document.getElementById("hotopen6").style.display = "none";
+		document.getElementById("hotopen7").style.display = "none";
+		document.getElementById("hotopen8").style.display = "none";
+		document.getElementById("hotopen9").style.display = "none";
+		document.getElementById("hotopen10").style.display = "none";
+		document.getElementById("hotopen12").style.display = "none";
+
+		document.getElementById("guestopen1").style.display = "none";
+		document.getElementById("guestopen2").style.display = "none";
+		document.getElementById("guestopen3").style.display = "none";
+		document.getElementById("guestopen4").style.display = "none";
+		document.getElementById("guestopen5").style.display = "none";
+		document.getElementById("guestopen6").style.display = "none";
+		document.getElementById("guestopen7").style.display = "none";
+		document.getElementById("guestopen8").style.display = "none";
+		document.getElementById("guestopen9").style.display = "none";
+		document.getElementById("guestopen10").style.display = "none";
+		document.getElementById("guestopen12").style.display = "none";
+
+		
 		document.getElementById('all').style.position = "static"
 		}
 		function gallery1(){
@@ -47,15 +75,68 @@
 			document.getElementById("galleryopen5").style.display = "block";
 			document.getElementById('all').style.position = "fixed"
 		}
-		// function pay(){
-		// 	var price = document.getElementById("pay").textContent
-		// 	alert(price)
-		window.onload = function(){
-			addEventListener("click", function() {
-				console.log("Щёлк!");
-			});
+
+
+		function hot1(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen1").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
 		}
-		// }
+		function hot2(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen2").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function hot3(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen3").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function hot4(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen4").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function hot5(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen5").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function hot6(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen6").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function hot7(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen7").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function hot8(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen8").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function hot9(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen9").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function hot10(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen10").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function hot11(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen11").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function hot12(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("hotopen12").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
 	</script>
 </head>
 <body>
@@ -157,20 +238,8 @@
 					</ol>
 			</div>
 	</div>
-	<!--Icons-->
-	<p>hello</p>
-	{% for hot in hots %}
-		
-			<img src="{{hot.picture.url}}">
-			
-				<h2>{{ hot.title }}</h2>
-				<h3>{{ hot.text|linebreaksbr }}</h3>
-				
-				<p>Цена: {{hot.price}}</p>
-				<button  id="pay">Оплатить</button>
 
-		
-	{% endfor %}
+	
 	<div id="container" class="container">
 		<h2>Наши приемущества</h2>
 		<div class="img-row">
@@ -204,35 +273,33 @@
 		<h2>Горячие предложения</h2>
 		<hr class="line">
 		<div class="hot-column">
-			<div class="card">
-				<div class="card-icon">
-					<img src="{%static 'img/first.png'%}" alt="">
-					<button class="button-card" id="all-view">Подробнее</button>
-				</div>
-				<p>Колличественный рост и сфера нашей активности</p>
-			</div>
-			<div class="card">
-				<div class="card-icon">
-					<img src="{%static 'img/second.png'%}" alt="">
-					<button class="button-card" id="all-view">Подробнее</button>
-				</div>
-				<p>Колличественный рост и сфера нашей активности</p>
-			</div>
+			{% for hot in hots %}
 			<div class="card">
 					<div class="card-icon">
-						<img src="{%static 'img/three.png'%}" alt="">
-						<button class="button-card" id="all-view">Подробнее</button>
+						<img src="{{hot.picture.url}}" alt="">
+						<button class="button-card" id="all-view-hot{{hot.num}}" onclick="hot{{hot.num}}()">Подробнее</button>
 					</div>
-					<p>Колличественный рост и сфера нашей активности</p>
-			</div>
-			<div class="card">
-					<div class="card-icon">
-						<img src="{%static 'img/four.png'%}" alt="">
-						<button class="button-card" id="all-view">Подробнее</button>
-					</div>
-					<p>Колличественный рост и сфера нашей активности</p>
+					<p>{{ hot.title }}</p>
+				</div>
+			{% endfor %}
 
+			<div class="allInfoGallery" id="galleryinfo">
+	{% for hot in hots %}
+		<div id="hotopen{{hot.num}}" class="galleryopened">
+			<div id="closedPay">
+					<p onclick="closed()">&times;</p>
 			</div>
+			<img src="{{hot.picture.url}}">
+			<div class="informationSall">
+				<h2>{{ hot.title }}</h2>
+				<h3>{{ hot.text|linebreaksbr }}</h3>
+				<p>Цена: {{hot.price}}</p>
+				<button  id="pay">Оплатить</button>
+			</div>
+		</div>
+	{% endfor %}
+	
+	</div>
 		</div>
 	</div>
 	
@@ -279,34 +346,36 @@
 			<h2>У нас в гостях</h2>
 			<hr class="line">
 			<div class="hot-column">
-				<div class="card">
-					<div class="card-icon">
-						<img src="{%static 'img/first.png'%}" alt="">
-						<button class="button-card" id="all-view">Подробнее</button>
-					</div>
-					<p>Колличественный рост и сфера нашей активности</p>
-				</div>
-				<div class="card">
-					<div class="card-icon">
-						<img src="{%static 'img/second.png'%}" alt="">
-						<button class="button-card" id="all-view">Подробнее</button>
-					</div>
-					<p>Колличественный рост и сфера нашей активности</p>
-				</div>
+				{% for guest in guests %}
 				<div class="card">
 						<div class="card-icon">
-							<img src="{%static 'img/three.png'%}" alt="">
-							<button class="button-card" id="all-view">Подробнее</button>
+							<img src="{{guest.picture.url}}" alt="">
+							<button class="button-card" id="all-view-{{guest.num}}">Подробнее</button>
 						</div>
-						<p>Колличественный рост и сфера нашей активности</p>
+						<p>{{ guest.title }}</p>
+					</div>
+						<!-- <h3>{{ guest.text|linebreaksbr }}</h3>
+						
+						<p>Цена: {{guest.price}}</p>
+						<button  id="pay">Оплатить</button> -->
+
+				
+			{% endfor %}
+			<div class="allInfoGallery" id="galleryinfo">
+			{% for guest in guests %}
+				<div id="guestopen{{guest.num}}" class="galleryopened">
+					<div id="closedPay">
+							<p onclick="closed()">&times;</p>
+					</div>
+					<img src="{{guest.picture.url}}">
+					<div class="informationSall">
+						<h2>{{ guest.title }}</h2>
+						<h3>{{ guest.text|linebreaksbr }}</h3>
+						<p>Цена: {{guest.price}}</p>
+						<button  id="pay">Оплатить</button>
+					</div>
 				</div>
-				<div class="card">
-						<div class="card-icon">
-							<img src="{%static 'img/four.png'%}" alt="">
-							<button class="button-card" id="all-view">Подробнее</button>
-						</div>
-						<p>Колличественный рост и сфера нашей активности</p>
-	
+			{% endfor %}
 				</div>
 			</div>
 		</div>

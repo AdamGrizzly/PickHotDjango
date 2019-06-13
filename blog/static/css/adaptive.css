@@ -85,7 +85,11 @@
         display: inline-block;
         margin-left: 1.5%;
         width: 47%;
+        
         margin-top: 1%;
+    }
+    .card-icon img{
+        height: 520px;
     }
     .wrapper{
         height: auto;
@@ -99,6 +103,7 @@
     .big-banner{
         width: 98%;
         margin: 0;
+        margin-left: 1%;
     }
     .big-image{
         width: 98%;
