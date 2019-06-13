@@ -1,0 +1,343 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PickHot</title>
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous">
+	</script>
+	<link rel="stylesheet" href="{%static 'css/blog.css'%}">
+	<link rel="stylesheet" href="{%static 'css/adaptive.css'%}">
+	<script src="{%static 'js/index.js'%}"></script>
+	<script>
+		function closed(){document.getElementById("galleryinfo").style.display = "none";
+		document.getElementById("galleryopen1").style.display = "none";
+		document.getElementById("galleryopen2").style.display = "none";
+		document.getElementById("galleryopen3").style.display = "none";
+		document.getElementById("galleryopen4").style.display = "none";
+		document.getElementById("galleryopen5").style.display = "none";
+		document.getElementById('all').style.position = "static"
+		}
+		function gallery1(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("galleryopen1").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function gallery2(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("galleryopen2").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function gallery3(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("galleryopen3").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function gallery4(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("galleryopen4").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		function gallery5(){
+			document.getElementById("galleryinfo").style.display = "block";
+			document.getElementById("galleryopen5").style.display = "block";
+			document.getElementById('all').style.position = "fixed"
+		}
+		// function pay(){
+		// 	var price = document.getElementById("pay").textContent
+		// 	alert(price)
+		window.onload = function(){
+			addEventListener("click", function() {
+				console.log("Щёлк!");
+			});
+		}
+		// }
+	</script>
+</head>
+<body>
+<div class="allContent" id='all'>
+		
+	<header>
+
+		<!-- <nav>
+			
+					  
+		  <ul class="menuFull">
+		    <li><a href="#!">Услуги</a></li>
+		    <li><a href="#!">О нас</a></li>
+		    <li><a href="#!">Контакты</a></li>
+		    <li><a href="#!">Алматы</a></li>
+		  </ul>
+		</nav> -->
+		<span class="logo-align">
+			<img src="{%static 'img/logo.png'%}" alt="logo" class="logo" id="logo">
+		</span>
+		<span class="number-align">
+			<p class="number"><a href="#!" class="tel">+7 777 777 8888</a></p>
+		</span>
+	</header>
+	<!-- Carousel -->
+	<div class="allInfoGallery" id="galleryinfo">
+	{% for post in posts %}
+		<div id="galleryopen{{post.num}}" class="galleryopened">
+			<div id="closedPay">
+					<p onclick="closed()">&times;</p>
+			</div>
+			<img src="{{post.picture.url}}">
+			<div class="informationSall">
+				<h2>{{ post.title }}</h2>
+				<h3>{{ post.text|linebreaksbr }}</h3>
+				<p>Цена: {{post.price}}</p>
+				<button  id="pay">Оплатить</button>
+			</div>
+		</div>
+	{% endfor %}
+	
+	</div>
+	<div class="carousel">
+			<div class="carousel-inner">
+					
+					<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+					
+					<div class="carousel-item">
+							<img src="{{posts.0.picture.url}}">
+							<button onclick="gallery1()">Подробнее</button>
+					</div>
+					<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+					<div class="carousel-item">
+							<img src="{{posts.1.picture.url}}">
+							<button onclick="gallery2()">Подробнее</button>	
+					</div>
+					<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+					<div class="carousel-item">
+							<img src="{{posts.2.picture.url}}">
+							<button onclick="gallery3()">Подробнее</button>
+					</div>
+					<input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="">
+					<div class="carousel-item">
+							<img src="{{posts.3.picture.url}}">
+							<button onclick="gallery4()">Подробнее</button>
+					</div>
+					<input class="carousel-open" type="radio" id="carousel-5" name="carousel" aria-hidden="true" hidden="">
+					<div class="carousel-item">
+							<img src="{{posts.4.picture.url}}">
+							<button onclick="gallery5()">Подробнее</button>
+					</div>	
+					<label for="carousel-5" class="carousel-control prev control-1">‹</label>
+					<label for="carousel-4" class="carousel-control next control-3">›</label>
+					<label for="carousel-3" class="carousel-control prev control-4">‹</label>
+					<label for="carousel-2" class="carousel-control next control-1">›</label>
+					<label for="carousel-1" class="carousel-control prev control-2">‹</label>
+					<label for="carousel-5" class="carousel-control next control-4">›</label>
+					<label for="carousel-4" class="carousel-control prev control-5">‹</label>
+					<label for="carousel-3" class="carousel-control next control-2">›</label>
+					<label for="carousel-2" class="carousel-control prev control-3">‹</label>
+					<label for="carousel-1" class="carousel-control next control-5">›</label>
+					<ol class="carousel-indicators">
+							<li>
+									<label for="carousel-1" class="carousel-bullet">•</label>
+							</li>
+							<li>
+									<label for="carousel-2" class="carousel-bullet">•</label>
+							</li>
+							<li>
+									<label for="carousel-3" class="carousel-bullet">•</label>
+							</li>
+							<li>
+									<label for="carousel-4" class="carousel-bullet">•</label>
+							</li>
+							<li>
+									<label for="carousel-5" class="carousel-bullet">•</label>
+							</li>
+							
+					</ol>
+			</div>
+	</div>
+	<!--Icons-->
+	<p>hello</p>
+	{% for hot in hots %}
+		
+			<img src="{{hot.picture.url}}">
+			
+				<h2>{{ hot.title }}</h2>
+				<h3>{{ hot.text|linebreaksbr }}</h3>
+				
+				<p>Цена: {{hot.price}}</p>
+				<button  id="pay">Оплатить</button>
+
+		
+	{% endfor %}
+	<div id="container" class="container">
+		<h2>Наши приемущества</h2>
+		<div class="img-row">
+			<div class="img-align">
+				<img src="{%static 'img/people.png'%}" alt="people" class="icon">
+				<p class="text-img">профессиональная <br> команда</p>
+			</div>
+			<div class="img-align">
+				<img src="{%static 'img/dual.png'%}" alt="dual" class="icon">
+				<p class="text-img">работаем <br>без посредников</p>
+			</div>
+			<div class="img-align">
+				<img src="{%static 'img/pay.png'%}" alt="pay" class="icon">
+				<p class="text-img">удобный способ <br> оплаты</p>
+			</div>
+			<div class="img-align">
+				<img src="{%static 'img/prize.png'%}" alt="prize" class="icon">
+				<p class="text-img">бонусы<br> ...</p>
+			</div>
+			<div class="img-align">
+				<img src="{%static 'img/hour.png'%}" alt="hour" class="icon">
+				<p class="text-img">работаем 24 часа <br> без выходных</p>
+			</div>
+		</div>
+		<h3>обратный звонок круглосуточно</h3>
+		<button>+7 777 777 8888</button>
+	</div>
+	
+	<!--content-->
+	<div class="hot-sentences">
+		<h2>Горячие предложения</h2>
+		<hr class="line">
+		<div class="hot-column">
+			<div class="card">
+				<div class="card-icon">
+					<img src="{%static 'img/first.png'%}" alt="">
+					<button class="button-card" id="all-view">Подробнее</button>
+				</div>
+				<p>Колличественный рост и сфера нашей активности</p>
+			</div>
+			<div class="card">
+				<div class="card-icon">
+					<img src="{%static 'img/second.png'%}" alt="">
+					<button class="button-card" id="all-view">Подробнее</button>
+				</div>
+				<p>Колличественный рост и сфера нашей активности</p>
+			</div>
+			<div class="card">
+					<div class="card-icon">
+						<img src="{%static 'img/three.png'%}" alt="">
+						<button class="button-card" id="all-view">Подробнее</button>
+					</div>
+					<p>Колличественный рост и сфера нашей активности</p>
+			</div>
+			<div class="card">
+					<div class="card-icon">
+						<img src="{%static 'img/four.png'%}" alt="">
+						<button class="button-card" id="all-view">Подробнее</button>
+					</div>
+					<p>Колличественный рост и сфера нашей активности</p>
+
+			</div>
+		</div>
+	</div>
+	
+	<!--Posts-->
+	<div id="fiveplaces">
+		<h4>ТОП 5</h4>
+		<h4>ПОПУЛЯРНЫХ МЕСТ</h4>
+	</div>
+	<div class="wrapper">
+		<div class="icon-on-banner">
+			<img src="{%static 'img/top5.png'%}" alt="" class="top-image">
+			<img src="{%static 'img/girl.png'%}" alt="" class="down-image">
+		</div>
+			<div class="big-banner">
+				<img src="{%static 'img/big-picture.png'%}" alt=""class="big-image">
+				<a href=""><button class="big-banner-button">Подробнее</button></a>
+			</div>
+			<div class="excurs">
+					<h3 class="nameOf">ШОУ</h3>
+					<h3 class="nameOf marked">ЭКСКУРСИИ</h3>
+					<h3 class="nameOf">ШОППИНГ</h3>
+					<div class="fourPlaces">
+						<div class="fourCard">
+						<img src="{%static 'img/canyon.png'%}" alt="" class="imagePlace">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat vero dolorum beatae, quas fuga maxime quod pariatur, illum atque soluta omnis molestiae explicabo similique? Iste dolorum iusto sequi dolore!</p>
+						</div>
+						<div class="fourCard">
+						<img src="{%static 'img/canyon.png'%}" alt="" class="imagePlace">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat vero dolorum beatae, quas fuga maxime quod pariatur, illum atque soluta omnis molestiae explicabo similique? Iste dolorum iusto sequi dolore!</p>
+						</div>
+						<div class="fourCard">
+						<img src="{%static 'img/canyon.png'%}" alt="" class="imagePlace">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat vero dolorum beatae, quas fuga maxime quod pariatur, illum atque soluta omnis molestiae explicabo similique? Iste dolorum iusto sequi dolore!</p>
+						</div>
+						<div class="fourCard">
+						<img src="{%static 'img/canyon.png'%}" alt="" class="imagePlace">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit repellat vero dolorum beatae, quas fuga maxime quod pariatur, illum atque soluta omnis molestiae explicabo similique? Iste dolorum iusto sequi dolore!</p>
+						</div>
+					</div>
+			</div>
+	</div>
+	<!--content-->
+	<div class="hot-sentences">
+			<h2>У нас в гостях</h2>
+			<hr class="line">
+			<div class="hot-column">
+				<div class="card">
+					<div class="card-icon">
+						<img src="{%static 'img/first.png'%}" alt="">
+						<button class="button-card" id="all-view">Подробнее</button>
+					</div>
+					<p>Колличественный рост и сфера нашей активности</p>
+				</div>
+				<div class="card">
+					<div class="card-icon">
+						<img src="{%static 'img/second.png'%}" alt="">
+						<button class="button-card" id="all-view">Подробнее</button>
+					</div>
+					<p>Колличественный рост и сфера нашей активности</p>
+				</div>
+				<div class="card">
+						<div class="card-icon">
+							<img src="{%static 'img/three.png'%}" alt="">
+							<button class="button-card" id="all-view">Подробнее</button>
+						</div>
+						<p>Колличественный рост и сфера нашей активности</p>
+				</div>
+				<div class="card">
+						<div class="card-icon">
+							<img src="{%static 'img/four.png'%}" alt="">
+							<button class="button-card" id="all-view">Подробнее</button>
+						</div>
+						<p>Колличественный рост и сфера нашей активности</p>
+	
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<footer>
+		<div class="footerImg"><img src="{%static 'img/logo.png'%}" alt=""></div>
+		<div class="footerMenu">
+			<!-- <ul>
+				<li>Услуги</li>
+				<li>О нас</li>
+				<li>Контакты</li>
+				<li>Юридическая информация</li>
+			</ul> -->
+			<div class="footerInfo">
+				<p>&copy; ТОО'<<????????????????>>', 2019. Все права защищены.</p><br>
+				<p id="ispl">Использование фотографий и текстов допускается только с письменного разрешения ТОО '<<????????????????>>'</p>
+			</div>
+		</div>	
+		<div class="social">
+			<h3>МЫ В СОЦ СЕТЯХ</h3>
+			<div class="socialImg">
+				<img src="{%static 'img/social.png'%}" alt="">
+				<img src="{%static 'img/social.png'%}" alt="">
+				<img src="{%static 'img/social.png'%}" alt="">
+				<img src="{%static 'img/social.png'%}" alt="">
+				
+			</div>
+		</div>
+	</footer>
+	
+	 
+</body>
+</html>

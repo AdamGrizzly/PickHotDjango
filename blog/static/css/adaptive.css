@@ -1,0 +1,263 @@
+@media screen and (max-width: 1480px){
+    html{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+    }
+    body{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    header{
+      width: 100%;
+      height: 120px;
+    }
+    .menuFull{
+        display:none;
+    }
+    .number{
+        display: none;
+    }
+    .logo-align{
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+       width: 20%;
+       height: 20%;
+       margin-top: 2.5%;
+       margin-bottom: 1%;
+    }
+    .carousel button{
+        top: 80%; 
+        left: 60%;
+        padding: 1%;
+    }
+    .carousel {
+        padding-top: 10%;
+    }
+    .carousel-item {
+        height: 550px;
+    }
+    .container h2{
+        font-size: 2em;
+    }
+    .container{
+        box-sizing: border-box;
+        padding-top: 5%;
+        text-align: center;
+        
+        text-transform: uppercase; 
+        color: #844fb3;
+        margin-left: 1%;
+        width: 99%;
+    }
+    .container p{
+        font-size: 1.3em;
+    }
+    .container h3{
+        margin-top: 3%;
+        color: black;
+        font-size: 1.6em;
+        width: 100%;
+    }
+    .img-align:first-child{
+        display: none;
+    }
+    .container button{
+        background-color: #1c1c1c;
+        margin-top: 2%;
+        color: white;
+        border:none;
+        width: 30%;
+        border-radius: 50px;
+        height: 5%;
+        font-size: 1.6em;
+        padding: 1%;
+    }
+    .hot-sentences h2{
+        font-size: 2.4em;
+    }
+    .card{
+        display: inline-block;
+        margin-left: 1.5%;
+        width: 47%;
+        margin-top: 1%;
+    }
+    .wrapper{
+        height: auto;
+        padding: 0;
+        margin-top: 6.5%;
+        width: 100%;
+    }
+    .icon-on-banner{
+        display: none;
+    }
+    .big-banner{
+        width: 98%;
+        margin: 0;
+    }
+    .big-image{
+        width: 98%;
+        margin-top: 15%;
+        margin-left: 1%;
+        margin-bottom: 2%;
+    }
+    .excurs{
+        
+        margin: 0;
+        padding: 0;
+        width: 98%;
+    }
+    .nameOf{
+       margin-top: -95%;
+       width: 30%;
+       margin-left: 3%;
+       text-align: center;
+    }
+    .fourCard{
+        display: inline-block;
+        margin-left: 1.5%;
+        width: 47%;
+        margin-top: 1%;
+    }
+    .fourCard img{
+        width: 45%;
+        margin-left: 2%;
+    }
+    .fourPlaces{
+        padding: 0;
+        margin: 0;
+        width: 98%;
+        margin-left: -98%; 
+    }
+    .fourPlaces img{
+        width: 100%;
+        padding-top: 3%;
+        height: 250px;
+    }
+    .fourPlaces p{
+        width: 96%;
+        margin: 0;
+        margin-left: 2.5%;
+        padding-left: 1%;
+        margin-top: 1%;
+        font-size: 1.4em;
+        margin-bottom: 3%;
+    }
+    
+    #fiveplaces{
+        color: white;
+        background-color: #844fb3;
+        width: 30%;
+        padding: 2%;
+        font-size: 1.4em;
+        text-align: center;
+        margin-left: 33%;
+        display: block;
+        margin-top: 1%;
+        position: absolute;
+    }
+    .big-banner-button{
+        margin-top: 85%; 
+        width: 30%;
+        margin-left: -35%;
+        border-radius: 50px;
+        height: 3%;
+        font-size: 1.6em;
+        padding: 0.1%;
+    }
+
+    footer{
+       width: 100%;
+       margin-top: 2%; 
+       padding: 0;
+       height: 440px;
+    }
+    .footerImg{
+        width: 100%;
+        border-bottom: 2px solid white;
+    }
+    .footerMenu{
+        width: 100%;
+        margin-left: 0%;
+        padding: 0;
+        margin-top: 0%;
+    }
+    .footerImg img{
+        width: 30%;
+        margin-top: 3%;
+        margin-left: 35%;
+        margin-bottom: 3%;
+    }
+    .footerMenu .footerInfo{
+        margin-top: 0%;
+        left: 0%;
+        margin-bottom: 5%;
+        width: 100%;
+    }
+    .footerMenu .footerInfo p{
+        font-size: 1.4em;
+        margin-left: 0%;
+        margin-top: 3%;
+        width: 100%;
+        text-align: center
+    }
+    .social{
+        width: 100%;
+        margin-left:0%;
+        margin-bottom: -5%;
+        text-align: center;
+
+    }
+    .social h3{
+        margin-left: 2%;
+    }
+    .socialImg{
+        margin-left: 1%;
+        margin-top: 1%;
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    .social img:not(:last-child){
+        margin-right: 3%;
+    }
+    .socialImg img{
+        width: 5%;
+        margin-left: 0%;
+        margin-bottom: 4%;
+    }
+    #ispl{
+        display: none;
+    }
+    .allInfoGallery{
+        width: 95%;
+        margin-left: 2%;
+        height: 90%;
+        margin-top: 6%;
+    }
+    #closedPay{
+        width: 5%;
+        margin-left: 2%;
+    }
+    .informationSall{
+        margin-top: 1%;
+        float: left;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .informationSall h2{
+        font-size: 2.8em;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    .informationSall button{
+        margin-top: 6%;
+        width: 50%;
+        margin-left: 25%;
+        font-size: 2em;
+    }
+}

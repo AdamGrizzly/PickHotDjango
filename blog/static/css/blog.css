@@ -1,0 +1,532 @@
+html{
+	padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+} 
+a{
+	text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+button:hover{
+    background-color: #844fb3;
+}
+.allContent{
+    width: 100%;
+    padding: 0;margin: 0;
+}
+/*HEADER*/
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+ header{
+   width: 100%;
+	 /* box-sizing: border-box; */
+     position: fixed;
+     z-index: 2;
+}
+ *, *:before, *:after {
+	 box-sizing: inherit;
+	 padding: 0;
+	 margin: 0;
+	 letter-spacing: 1.1px;
+}
+header{
+     width: 100%;
+     height: 150px;
+	 background: #212121;
+	 font-family: "Varela Round", sans-serif;
+}
+ .menuFull {
+	 display: flex;
+	 justify-content: left;
+	 align-items: left;
+	 max-width: 500px;
+	 margin: 0;
+	 margin-left: 2%;
+	 height: 10%;
+	 list-style: none;
+}
+ .menuFull li {
+ 	padding-top: 13%;
+	 width: 130px;
+	 height: 50px;
+	 transition: background-position-x 0.9s linear;
+	 text-align: center;
+}
+ .menuFull li a {
+	 font-size: 24px;
+	 color: #ffa500;
+	 text-decoration: none;
+     transition: all 0.45s;
+     font-weight: bold;
+}
+
+ .menuFull li:hover a {
+	 color: #ffa500;
+}
+ .menuFull li:not(:last-child) {
+	 margin-right: 22px;
+}
+ @keyframes line {
+	 0% {
+		 background-position-x: 390px;
+		 
+	}
+}
+
+.number-align{
+	display: flex;
+	justify-content: right;
+}
+.number{
+	font-size: 22px;
+	 margin-left: 80%;
+	 margin-top: -4.5%;
+	 height: 10%;
+}
+.tel{
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/*logo*/
+.logo-align{
+	 display: flex;
+	 justify-content: center;
+}
+.logo{
+	width: 15%;
+	height: 10%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+/*Carousel*/
+
+.carousel {
+  position: relative;
+	box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+  padding-top: 5%;
+
+}
+.carousel button{
+  position: absolute;
+  background-color: #1c1c1c;
+  top: 85%;
+  color: white;
+  border:none;
+  width: 30%;
+  left: 65%;
+  border-radius: 50px;
+  height: 6%;
+  font-size: 1.6em;
+  padding: 0.1%;
+  font-weight: bold;
+  z-index: 1;
+}
+.carousel img{
+    width: 100%;
+    height: 860px;
+}
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    height: 860px;
+    width: 100%;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 1;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3,
+#carousel-4:checked ~ .control-4,
+#carousel-5:checked ~ .control-5 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet,
+#carousel-5:checked ~ .control-5 ~ .carousel-indicators li:nth-child(5) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+/*container*/
+.container{
+    box-sizing: border-box;
+    padding-top: 5%;
+    text-align: center;
+    text-transform: uppercase; 
+    color: #844fb3;
+    width: 100%;
+}
+.container h2{
+    font-size: 2.2em;
+}
+.container h3{
+    margin-top: 2%;
+    color: black;
+    font-size: 1.4em;
+}
+.img-row{
+    margin-top: 3%;
+    margin-left: 4%;
+    display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 list-style: none;
+}
+.img-align img:not(:last-child){
+    margin-right: 100px;
+}
+.img-align .icon{
+    width: 70%;
+}
+.text-img{
+    margin-top: 8%;
+    display: flex;
+    margin-left:-30%;
+	 justify-content: center;
+	 align-items: center;
+     list-style: none;
+     font-weight: bold;
+}
+.text-img :not(:last-child) {
+    margin-right: 200px;
+}
+.container button{
+    background-color: #1c1c1c;
+    margin-top: 2%;
+    color: white;
+    border:none;
+    width: 20%;
+    border-radius: 50px;
+    height: 5%;
+    font-size: 1.4em;
+    padding: 0.5%;
+}
+
+.hot-sentences{
+    margin-top: 3%;
+    color: #bfbdbe;
+    width: 100%;
+}
+.line{
+    color: #bfbdbe;
+}
+.hot-sentences h2{
+    margin-left: 1%;
+    font-size: 2em;
+    margin-bottom: 0.2%;
+    text-transform: uppercase;
+}
+.card{
+    display: inline-block;
+    margin-left: 2.2%;
+    width: 22%;
+    margin-top: 1%;
+}
+.card p{
+    color: #1c1c1c;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1%;
+}
+.card-icon{
+    position: relative;
+    width: 100%;
+}
+.card-icon img{
+    width: 100%;
+}
+.button-card{
+    position: absolute;
+    background-color: #1c1c1c;
+    margin-top: -25%;
+    color: white;
+    border:none;
+    width: 80%;
+    margin-left: 9%;
+    border-radius: 50px;
+    height: 9%;
+    font-size: 1.6em;
+    padding: 0.8%;
+}
+.wrapper{
+    background: #EDEDED;
+    margin-top: 2%;
+    width: 100%;
+}
+.icon-on-banner{
+    width: 12%;
+}
+.top-image{
+    width: 80%;
+    margin-left: 10%;
+    
+}
+.down-image{
+    margin-top: 80%;
+    width: 60%;
+    margin-left: 20%;
+}
+.big-banner{
+    margin-left: 12%;
+    width: 38%;
+}
+.big-image{
+    width: 100%;
+    height: 80%;
+    margin-top: -100%;
+    margin-bottom: 2%;
+}
+.big-banner-button{
+    position: absolute;
+    background-color: #1c1c1c;
+    margin-top: -6%;
+    color: white;
+    border:none;
+    width: 18%;
+    margin-left: 3%;
+    border-radius: 50px;
+    height: 6%;
+    font-size: 1.4em;
+    padding: 0.1%;
+    font-weight: bold;
+}
+.excurs{
+    margin-left: 51%;
+    width: 48%;
+    display: flex; flex-direction: row;
+}
+#fiveplaces{
+    display: none;
+}
+.nameOf{
+    margin-top: -69%;
+    margin-left: 16%;
+    font-weight: bolder;
+    font-size: 1.6em;
+    height: 5%;
+}
+.marked{
+    border-bottom: 8px solid #844fb3;
+   
+}
+.fourPlaces{
+    width:48%;
+    margin-left: -88%;
+    margin-top: -62%;
+}
+.fourPlaces img{
+    width: 62%;
+    padding-top: 6%;
+}
+.fourPlaces p{
+    width: 100%;
+    margin-left: 70%;  
+    margin-top: -27%;
+    font-size: 1.1em;
+}
+footer{
+    width: 100%;
+    margin-top: 1.5%;
+    background-color: #1c1c1c;
+    color:white;
+    padding-bottom: 12%;
+}
+.footerImg{
+    width: 20%;
+}
+.footerImg img{
+    width: 80%;
+    margin-top: 15%;
+    margin-left: 10%;
+}
+.footerMenu{
+    width: 70%;
+    margin-left: 20%;
+    margin-top: -5%;  
+}
+
+.footerMenu .footerInfo{
+    margin-top: -10%;
+    left: 25%;
+    margin-bottom: 5%;
+}
+.footerMenu .footerInfo p{
+    font-size: 1.2em;
+    margin-left: 10%;
+}
+.social{
+    width: 70%;
+    margin-left: 27%;
+    margin-bottom: -9%;
+}
+.socialImg{
+    margin-left: 16%;
+    margin-top: -2.7%;
+}
+.socialImg img{
+    width: 4%;
+    margin-left: 1%;
+}
+
+.allInfoGallery{
+  position: fixed;
+  width: 70%;
+  height: 100%;
+  z-index: 10;
+  margin-left: 30%;
+  background-color: white;
+  display: none;
+  color: #1c1c1c;
+}
+.galleryopened{
+  display: none;
+  width: 100%;
+}
+.galleryopened img{
+  width: 90%;
+  height: 500px;
+  float: left;
+  margin-top: -1%;
+  margin-left: 5%;
+}
+.informationSall{
+  margin-top: 1%;
+  float: left;
+  width: 60%;
+  margin-left: 20%;
+}
+.informationSall p{
+  margin-left: 5%;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.informationSall h2{
+  text-align: center;
+  font-size: 2.4em;
+}
+.informationSall h3{
+width: 90%;
+margin-left: 5%;
+margin-top: 2%;
+margin-bottom: 2%;
+}
+.informationSall button{
+  margin-top: 3%;
+  width: 40%;
+  margin-left: 30%;
+  background-color: #1c1c1c;
+  color: white;
+  border:none;
+  border-radius: 50px;
+  height: 10%;
+  font-size: 1.6em;
+  padding: 1%;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+#closedPay{
+    width: 5%;
+    margin-left: 95%;
+  }
+#closedPay p{
+  cursor: pointer;
+  font-size: 5em;
+  color: grey
+}
